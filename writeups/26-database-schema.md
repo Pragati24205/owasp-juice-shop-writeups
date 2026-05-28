@@ -10,25 +10,29 @@ UNION SQLi against search endpoint exposes full DB schema including table and co
 
 The injection point is `/rest/products/search`. Identified it using `'` to break the query and get error output.
 
-![SQL error confirming injection point](../assets/26-database-schema-1.png)
+![SQL error confirming injection point](../assets/img-092.png)
 
-Closed the existing query using `'))--`.
+Closed the existing query using `'))--`. Error disappears.
+
+![SQL closing of query](../assets/img-093.png)
 
 Enumerated the number of columns using `UNION SELECT`. In SQLite, the `sqlite_schema` table (historically known as `sqlite_master`) stores DDL for all objects, so used it as the base table.
 
 Got a syntax error on `sqlite_schema` and this implies the table is present.
 
-![sqlite_schema table confirmed present](../assets/26-database-schema-2.png)
+![sqlite_schema table confirmed present](../assets/img-094.png)
 
 Enumerated the correct column count by incrementing numbers.
 
-![Column count enumeration](../assets/26-database-schema-3.png)
+![Column count enumeration](../assets/img-096.png)
 
 Placed `sql` in one of the columns and got the full schema back, including `CREATE TABLE` statements.
 
-![Full database schema extracted](../assets/26-database-schema-4.png)
+![Full database schema extracted](../assets/img-097.png)
 
 Challenge solved.
+
+![Challenge solved](../assets/img-098.png)
 
 ## Vulnerability Explanation
 

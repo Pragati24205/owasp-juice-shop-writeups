@@ -10,11 +10,11 @@ Unauthenticated PUT on product endpoint allows HTML injection and link manipulat
 
 To find the target product's ID, requested the `/api/products` endpoint and went through the title of each product.
 
-![Products list from API](../assets/23-product-tampering-1.png)
+![Products list from API](../assets/img-082.png)
 
 Found the target product (OWASP SSL Advanced Forensic Tool) has ID 9. Requested that specific product in Burp Suite.
 
-![Target product details in Burp](../assets/23-product-tampering-2.png)
+![Target product details in Burp](../assets/img-083.png)
 
 The endpoint is vulnerable to HTML injection (same as the API-based XSS challenge). Changed the request method from GET to PUT, changed `Content-Type` to `application/json`, and added the description parameter with the target link:
 
@@ -24,13 +24,15 @@ The endpoint is vulnerable to HTML injection (same as the API-based XSS challeng
 }
 ```
 
-![PUT request to tamper product](../assets/23-product-tampering-3.png)
+![PUT request to tamper product](../assets/img-084.png)
 
 Verified that the redirect link changed in the UI.
 
-![Tampered link visible in UI](../assets/23-product-tampering-4.png)
+![Tampered link visible in UI](../assets/img-085.png)
 
 Challenge solved.
+
+![Challenge solved](../assets/img-086.png)
 
 ## Vulnerability Explanation
 

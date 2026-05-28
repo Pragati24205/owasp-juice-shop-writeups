@@ -10,21 +10,20 @@ HTTP Parameter Pollution bypasses basket ownership check, enables unauthorized p
 
 Added an item to my basket and examined the request in Burp Suite.
 
-![Add to basket request](../assets/22-manipulate-basket-1.png)
+![Add to basket request](../assets/img-076.png)
 
 Sent to Burp Repeater and tried changing the basket ID and got a 401 Unauthorized error.
 
-![401 on basket ID change](../assets/22-manipulate-basket-2.png)
+![401 on basket ID change](../assets/img-077.png)
 
 Added a duplicate `BasketId` parameter and tried sending the request.
 
-![Duplicate BasketId parameter](../assets/22-manipulate-basket-3.png)
+![Duplicate BasketId parameter](../assets/img-078.png)
 
-It worked. Verified by accessing userId 2's basket to confirm the product was added.
-
-![Product added to another user's basket](../assets/22-manipulate-basket-4.png)
-
+It worked. Added a product. Verified by accessing userId 2's basket to confirm the product was added.
 Challenge solved.
+
+![Challenge solved](../assets/img-081.png)
 
 ## Vulnerability Explanation
 

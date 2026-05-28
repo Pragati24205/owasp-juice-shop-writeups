@@ -15,11 +15,12 @@ Applied the same SQLi technique used in previous login challenges.
 Payload in email field: `jim@juice-sh.op'--`  
 Password: any random string
 
-![Login Jim request in Burp](../assets/25-login-jim-1.png)
+![Login Jim request in UI](../assets/img-089.png)
+![Login Jim response in Burp](../assets/img-090.png)
 
 Clicked login and the challenge was solved.
 
-![Login Jim challenge complete](../assets/25-login-jim-2.png)
+![Login Jim challenge complete](../assets/img-091.png)
 
 ## Vulnerability Explanation
 

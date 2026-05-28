@@ -8,21 +8,25 @@ Security question answerable via public OSINT, full account takeover without cre
 
 ## Methodology
 
-Found Bjoern's email from the product reviews: `bjoern@owasp.org`
+Found Bjoern's email from the product reviews: `bjoern@owasp.org`. In juice-shop, found the following product.
+
+![Bjoern's Product](../assets/img-059.png)
 
 Needed to guess the answer to his security question. Searched for Björn Kimminich on Google and found his Twitter/X handle `@bkimminich`.
 
-![Bjoern's Twitter profile](../assets/19-bjoerns-pet-1.png)
+![Bjoern's Twitter profile](../assets/img-060.png)
 
 Scrolled through his posts and found a tweet from 5 years ago mentioning his three-legged cat named Zaya.
 
-![Tweet about Zaya the cat](../assets/19-bjoerns-pet-2.png)
+![Tweet about Zaya the cat](../assets/img-061.png)
 
 Tried `Zaya` as the answer to the security question and it worked.
 
-![Password reset successful](../assets/19-bjoerns-pet-3.png)
+![Password reset successful](../assets/img-062.png)
 
 Challenge solved.
+
+![Challenge solved](../assets/img-063.png)
 
 ## Vulnerability Explanation
 

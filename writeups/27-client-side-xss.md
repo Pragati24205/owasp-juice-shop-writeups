@@ -12,7 +12,7 @@ Client-side validation is a UX feature, not a security control. Any validation e
 
 Went to user registration, filled in dummy details, and clicked Register. Intercepted the POST request to `/api/Users/` in Burp Repeater.
 
-![Registration form with dummy details](../assets/27-client-side-xss-1.png)
+![Registration form with dummy details](../assets/img-099.png)
 
 In the email parameter, instead of a valid email, put an XSS payload:
 
@@ -22,13 +22,15 @@ In the email parameter, instead of a valid email, put an XSS payload:
 
 Sent the request.
 
-![Modified registration request with XSS payload](../assets/27-client-side-xss-2.png)
+![Modified registration request with XSS payload](../assets/img-100.png)
 
-Logged into the admin account and visited the administration panel — the XSS fired.
+Logged into the admin account and visited the administration panel and the XSS was fired.
 
-![XSS fired on admin panel](../assets/27-client-side-xss-3.png)
+![XSS fired on admin panel](../assets/img-102.png)
 
 Challenge solved.
+
+![Challenge solved](../assets/img-101.png)
 
 ## Vulnerability Explanation
 

