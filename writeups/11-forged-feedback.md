@@ -19,7 +19,7 @@ Went to the contact section and submitted legitimate feedback by clicking "Custo
   "rating": 2
 }
 ```
-[!Forged feedback response](../assets/img-024.png)
+[!Forged feedback request](../assets/img-024.png)
 
 Sent the above request to Burp Repeater and tried changing the `UserId` parameter to `2`.
 
