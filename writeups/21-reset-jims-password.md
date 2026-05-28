@@ -28,7 +28,7 @@ Prompted an AI to identify the person from the clues:
 
 ![AI identifying Jim as Captain Kirk](../assets/img-072.png)
 
-The AI identified the character as Captain James T. Kirk from Star Trek. Googled his brother's name and found it in the Wikipedia page — **Samuel**.
+The AI identified the character as Captain James T. Kirk from Star Trek. Googled his brother's name and found it in the Wikipedia page as **Samuel**.
 
 ![Wikipedia showing George Samuel Kirk](../assets/img-073.png)
 
