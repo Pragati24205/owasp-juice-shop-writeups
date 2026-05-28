@@ -10,11 +10,11 @@ Accidentally deployed dev feature publicly accessible, enables smart contract ta
 
 In dev tools under Sources, found the `web3` path inside `main.js`.
 
-![web3-sandbox path in main.js](../assets/18-web3-sandbox-1.png)
+![web3-sandbox path in main.js](../assets/img-057.png)
 
 Entered the path in the URL. Final URL: `http://localhost:3000/#/web3-sandbox`
 
-![Web3 Sandbox accessible](../assets/18-web3-sandbox-2.png)
+![Web3 Sandbox accessible](../assets/img-058.png)
 
 Challenge solved.
 

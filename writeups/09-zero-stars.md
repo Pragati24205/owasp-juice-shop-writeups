@@ -34,7 +34,7 @@ Going further, I also tested with negative integers and very large numbers to se
 
 Both were accepted successfully.
 
-![Response reflected in UI](../assets/img-020.png)
+![Response reflected in UI](../assets/img-021.png)
 
 ## Vulnerability Explanation
 

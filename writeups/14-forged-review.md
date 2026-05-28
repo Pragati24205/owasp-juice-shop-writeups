@@ -25,12 +25,13 @@ Sent to Burp Repeater and edited the message and author parameter:
   "author": "hehe@hehe.com"
 }
 ```
+The response was,
 
-![Forged review request in Burp](../assets/14-forged-review-1.png)
+![Forged review response in Burp](../assets/img-037.png)
 
-The response was `{"status":"success"}`.
+Challenge solved.
 
-![Forged Review challenge solved](../assets/14-forged-review-2.png)
+![Forged Review challenge solved](../assets/img-038.png)
 
 ## Vulnerability Explanation
 

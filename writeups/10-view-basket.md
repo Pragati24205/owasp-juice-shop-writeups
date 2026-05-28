@@ -10,11 +10,11 @@ IDOR exposes other users' shopping data, privacy violation with social engineeri
 
 Viewed `http://localhost:3000/#/basket` and observed the request in Burp Suite. Found that it hits the `/rest/basket/1` endpoint.
 
-![Basket request in Burp](../assets/10-view-basket-1.png)
+![Basket request in Burp](../assets/img-022.png)
 
 Sent the request to Burp Repeater, changed the endpoint to `/rest/basket/2`, and sent the request and I viewed another user's shopping basket.
 
-![Another user's basket accessed](../assets/10-view-basket-2.png)
+![Another user's basket accessed](../assets/img-023.png)
 
 ## Vulnerability Explanation
 

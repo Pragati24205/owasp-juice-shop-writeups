@@ -10,15 +10,15 @@ Mass assignment vulnerability allows self-elevation to admin role during registr
 
 Created a new account and observed the request in Burp:
 
-![Registration request in Burp](../assets/12-admin-registration-1.png)
+![Registration request in Burp](../assets/img-027.png)
 
 Sent the request to Burp Repeater, changed the email, appended a `role` parameter set to `"admin"`, then sent the request.
 
-![Modified request with role=admin](../assets/12-admin-registration-2.png)
+![Modified request with role=admin](../assets/img-028.png)
 
 Got admin privileges.
 
-![Admin registration challenge solved](../assets/12-admin-registration-3.png)
+![Admin registration challenge solved](../assets/img-029.png)
 
 ## Vulnerability Explanation
 

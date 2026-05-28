@@ -10,19 +10,25 @@ UNION-based SQLi exfiltrates all user emails and password hashes from the databa
 
 In the search field at `http://localhost:3000/#/search?q=`, searched `apple` and observed the request in Burp and it returned results matching the query.
 
+![SQL query return](../assets/img-045.png)
+
 Tried `'` and it broke the SQL query and returned an error exposing the query structure.
 
-![SQL error from single quote](../assets/17-user-credentials-1.png)
+![SQL error from single quote](../assets/img-046.png)
 
 Closed the existing query using `'))--`, which commented out the rest of the code and returned results successfully.
 
-Then clubbed it with a UNION query — got a column count mismatch error.
+![SQL query return with modified payload](../assets/img-047.png)
 
-![UNION column count error](../assets/17-user-credentials-2.png)
+Then clubbed it with a UNION query and got a column count mismatch error.
+
+![UNION column count error](../assets/img-048.png)
 
 Enumerated the number of columns by incrementing until finding the right count.
 
-![Finding correct column count](../assets/17-user-credentials-3.png)
+![Finding correct column count](../assets/img-052.png)
+
+![Replacing search string](../assets/img-053.png)
 
 Once the column count matched, replaced placeholder strings with `email` and `password` to extract credentials from the Users table.
 
@@ -31,9 +37,11 @@ Final payload:
 '))UNION+SELECT+email,password,'3','4','5','6','7','8','9'+FROM+USERS--
 ```
 
-![User credentials extracted](../assets/17-user-credentials-4.png)
+![User credentials extracted](../assets/img-055.png)
 
 Challenge solved.
+
+![Challenge solved](../assets/img-056.png)
 
 ## Vulnerability Explanation
 

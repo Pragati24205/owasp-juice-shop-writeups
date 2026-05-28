@@ -19,14 +19,15 @@ Went to the contact section and submitted legitimate feedback by clicking "Custo
   "rating": 2
 }
 ```
+[!Forged feedback response](../assets/img-024.png)
 
 Sent the above request to Burp Repeater and tried changing the `UserId` parameter to `2`.
 
-![Forged feedback request](../assets/11-forged-feedback-1.png)
+![Forged feedback response](../assets/img-025.png)
 
 It was a success.
 
-![Forged feedback challenge solved](../assets/11-forged-feedback-2.png)
+![Forged feedback challenge solved](../assets/img-026.png)
 
 ## Vulnerability Explanation
 

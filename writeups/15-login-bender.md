@@ -13,11 +13,11 @@ Retrieved Bender's email from the product reviews. Intercepted the original logi
 Payload in email field: `bender@juice-sh.op'--`  
 Password: any string
 
-![Login Bender request in Burp](../assets/15-login-bender-1.png)
+![Login Bender request in Burp](../assets/img-039.png)
 
 Sent the request and the challenge solved.
 
-![Login Bender challenge complete](../assets/15-login-bender-2.png)
+![Login Bender challenge complete](../assets/img-040.png)
 
 ## Vulnerability Explanation
 

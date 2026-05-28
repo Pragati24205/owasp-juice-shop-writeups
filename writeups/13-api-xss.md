@@ -10,7 +10,7 @@ Stored XSS in product description fires for every user who views the product, ad
 
 First, viewed an item and examined the request in Burp to understand the product data structure.
 
-![Product GET request in Burp](../assets/13-api-xss-1.png)
+![Product GET request in Burp](../assets/img-030.png)
 
 Sent the request to Burp Repeater. Modified the description field with a JS payload and changed the request method to `PUT`. Set `Content-Type` to `application/json`.
 
@@ -20,15 +20,15 @@ Sent the request to Burp Repeater. Modified the description field with a JS payl
 }
 ```
 
-![PUT request with XSS payload in description](../assets/13-api-xss-2.png)
+![PUT request with XSS payload in description](../assets/img-031.png)
 
 The response confirmed the payload was stored.
 
-![Response confirming payload stored](../assets/13-api-xss-3.png)
+![Response confirming payload stored](../assets/img-033.png)
 
 Challenge solved.
 
-![API XSS challenge complete](../assets/13-api-xss-4.png)
+![API XSS challenge complete](../assets/img-034.png)
 
 ## Vulnerability Explanation
 

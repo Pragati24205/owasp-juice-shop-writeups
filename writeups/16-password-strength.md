@@ -8,17 +8,21 @@ Weak unsalted MD5 password cracked via public rainbow tables, admin account comp
 
 ## Methodology
 
-Used `' OR 1=1--` to login into the admin account and copied the JWT token. Decoded it at [jwt.io](https://jwt.io) — it decoded into a JSON document containing the admin's hashed password.
+Used `' OR 1=1--` to login into the admin account and copied the JWT token. Decoded it at [jwt.io](https://jwt.io) and it decoded into a JSON document containing the admin's hashed password.
 
-![JWT decoded at jwt.io](../assets/16-password-strength-1.png)
+![JWT decoded at jwt.io](../assets/img-041.png)
+
+![JWT decoded](../assets/img-042.png)
 
 The password is stored as a hash. Used CrackStation to decode the hash using the MD5 algorithm.
 
-![CrackStation cracking MD5 hash](../assets/16-password-strength-2.png)
+![CrackStation cracking MD5 hash](../assets/img-043.png)
 
 Cracked password: `admin123`
 
-Logged in with `email: "admin@juice-sh.op"` and `password: "admin123"` — challenge solved.
+Logged in with `email: "admin@juice-sh.op"` and `password: "admin123"` and the challenge was solved.
+
+![Challenge solved](../assets/img-044.png)
 
 This challenge can also be solved by brute-forcing with a proper wordlist.
 
