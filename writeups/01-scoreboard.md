@@ -10,13 +10,13 @@ Hidden route with no auth check, but exposed data has no damage potential.
 
 Opened dev tools and looked through `main.js`. Pressed `Ctrl+F` and searched for `"score"`.
 
-![main.js search for score](../assets/01-scoreboard-1.png)
+![main.js search for score](../assets/img-000.png)
 
 Found the path hardcoded. Appended `/score-board` to the existing URL.
 
 Final URL: `http://localhost:3000/#/score-board`
 
-![scoreboard challenge complete](../assets/01-scoreboard-2.png)
+![scoreboard challenge complete](../assets/img-001.png)
 
 ## Vulnerability Explanation
 

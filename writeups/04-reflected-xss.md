@@ -23,7 +23,7 @@ New URL:
 
 Reloaded the page and the code executed.
 
-![Reflected XSS executed on track order page](../assets/04-reflected-xss-1.png)
+![Reflected XSS executed on track order page](../assets/img-004.png)
 
 ## Vulnerability Explanation
 

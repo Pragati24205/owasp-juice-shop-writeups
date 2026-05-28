@@ -10,7 +10,7 @@ Authentication bypass via SQLi grants full admin access with no credentials.
 
 First, broke the SQL query by putting `'` in username and password, it triggered an error. Then put `' OR 1=1--` in the username field and a random string in the password (it gets commented out anyway).
 
-![Admin login successful via SQLi](../assets/06-login-admin-1.png)
+![Admin login successful via SQLi](../assets/img-008.png)
 
 ## Vulnerability Explanation
 

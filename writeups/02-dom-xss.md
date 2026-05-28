@@ -19,7 +19,7 @@ The alert fired. In dev tools, identified:
 - **Sink:** `this.sanitizer.bypassSecurityTrustHtml(queryParam)`
 - **Source:** `this.route.snapshot.queryParams.q`
 
-![DOM XSS alert fired](../assets/02-dom-xss-1.png)
+![DOM XSS alert fired](../assets/img-002.png)
 
 ## Vulnerability Explanation
 

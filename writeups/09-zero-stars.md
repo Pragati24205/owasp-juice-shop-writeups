@@ -12,25 +12,29 @@ After getting into the admin account, went to the contact section at `http://loc
 
 Submitted a legitimate feedback request and observed it in Burp:
 
-![Feedback request parameters](../assets/09-zero-stars-1.png)
+![Feedback request parameters](../assets/img-014.png)
 
 Sent the request to Burp Repeater and set the rating parameter to `0`.
 
-![Zero rating submission](../assets/09-zero-stars-2.png)
+![Zero rating submission](../assets/img-015.png)
 
 Submitted the zero-rating comment and the challenge was solved.
 
-![Zero stars in admin panel](../assets/09-zero-stars-3.png)
+![Zero stars in admin panel](../assets/img-016.png)
+
+![email reflected in UI](../assets/img-017.png)
+
+![challenge solved](../assets/img-018.png)
 
 Going further, I also tested with negative integers and very large numbers to see how the application handles out-of-range values.
 
-![Negative integer as rating](../assets/09-zero-stars-4.png)
+![Negative integer as rating](../assets/img-019.png)
 
-![Large number as rating](../assets/09-zero-stars-5.png)
+![Large number as rating](../assets/img-019.png)
 
 Both were accepted successfully.
 
-![Response reflected in UI](../assets/09-zero-stars-6.png)
+![Response reflected in UI](../assets/img-020.png)
 
 ## Vulnerability Explanation
 

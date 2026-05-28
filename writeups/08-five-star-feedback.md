@@ -10,13 +10,15 @@ Missing authorization on DELETE endpoint allows any authenticated user to delete
 
 After accessing the admin page, clicked the delete option on the five-star reviews and observed the request in Burp Suite.
 
-![DELETE request for feedback in Burp](../assets/08-five-star-feedback-1.png)
+![DELETE request for feedback in Burp](../assets/img-011.png)
 
 This solved the challenge. Out of curiosity, I then replayed the request by swapping the admin's JWT with a normal user's JWT to test if the server actually validates privileges.
 
-![Replayed with normal user JWT](../assets/08-five-star-feedback-2.png)
+![Replayed with normal user JWT](../assets/img-012.png)
 
 It worked proving that the server does not initiate any check on deleting feedback.
+
+![Challenge solved](../assets/img-013.png)
 
 ## Vulnerability Explanation
 

@@ -10,9 +10,11 @@ Unauthenticated access to admin panel via route enumeration, no server-side role
 
 After getting into the admin account via SQL injection, opened developer tools. In `main.js`, searched for `"admin"` using `Ctrl+F`.
 
-![main.js admin route search](../assets/07-admin-section-1.png)
+![main.js admin route search](../assets/img-009.png)
 
 Found the `/administration` path. Navigated to it directly.
+
+![administration path accessible](../assets/img-010.png)
 
 Final URL: `http://localhost:3000/#/administration`
 

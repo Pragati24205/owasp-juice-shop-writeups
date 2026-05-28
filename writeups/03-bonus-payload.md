@@ -16,7 +16,7 @@ The search bar is vulnerable to XSS. Searched the following iframe payload:
 
 It got reflected in the browser. The `allow` attribute is set to `autoplay`, which plays the music without user interaction.
 
-![Bonus payload reflected in browser](../assets/03-bonus-payload-1.png)
+![Bonus payload reflected in browser](../assets/img-003.png)
 
 ## Vulnerability Explanation
 

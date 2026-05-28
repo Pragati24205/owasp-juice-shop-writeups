@@ -10,11 +10,15 @@ Stack trace exposure reveals DB type and query structure, aids targeted injectio
 
 On the login page, provoked an error by inserting `'` in both the login and password parameters. This breaks the existing SQL query.
 
-![Error triggered on login page](../assets/05-error-handling-1.png)
+![Error triggered on login page](../assets/img-005.png)
 
 In Burp Suite, the full stack trace was visible in the response, including the raw SQL query, file paths, and database type.
 
-![Stack trace in Burp response](../assets/05-error-handling-2.png)
+![Stack trace in Burp response](../assets/img-006.png)
+
+The challenge was solved.
+
+![Challlenge solved](../assets/img-007.png)
 
 ## Vulnerability Explanation
 
