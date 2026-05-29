@@ -8,7 +8,7 @@ Each writeup covers my methodology, what I found, why it works, and what the rea
 
 | # | Challenge | Category | Severity |
 |---|-----------|----------|----------|
-| 01 | [Find Scoreboard](./01-scoreboard.md) | Miscellaneous | Low |
+| 01 | [Find Scoreboard](./writeups/01-scoreboard.md) | Miscellaneous | Low |
 | 02 | [DOM XSS](./02-dom-xss.md) | XSS | High |
 | 03 | [Bonus Payload](./03-bonus-payload.md) | XSS | High |
 | 04 | [Reflected XSS](./04-reflected-xss.md) | XSS | High |
